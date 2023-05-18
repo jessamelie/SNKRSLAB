@@ -15,10 +15,15 @@ const Landing = () => {
         <div>
              <div className='background-container'>
                 <div className='title-container' onClick={togglePopup}>
-                <h1>SNKRS LAB </h1> 
+                <h1>SNKRS LAB </h1>
+                <div/> 
+            <div/>
+
                 <Navigation/>
+            
                 {isOpen && <Popup
                       content={<>
+                      <div className='popup-container'>
                         <div className='Login'>
                             <h2>Se connecter</h2>
                             <button>Connexion</button>
@@ -30,12 +35,13 @@ const Landing = () => {
                         <div className='Guest'>
                             <h2>Continuer en tant qu'invité(e)</h2>
                         </div>
+                        </div>
                       </>}
                       handleClose={togglePopup}
                     />}
                 </div>
-            </div>
          </div>
+        </div>
 
     );
 };

@@ -29,6 +29,7 @@ body{
     justify-content: center;
     border: 10px rgb(0, 0, 0) solid;
     cursor: pointer;
+    z-index: 1;
 }
 
 .title-container h1{
