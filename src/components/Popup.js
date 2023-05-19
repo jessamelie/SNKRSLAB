@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/Popup.css";
 
 const Popup = () => {
+    const [isOpen, setIsOpen] = useState(true);
+
+    const closePopup = () => {
+      setIsOpen(false);
+    };
+
+
   return (
     <div className="popup-box">
+        {isOpen && (
       <div className="box">
-        <div className="popup-container">
+        <div className={`popup-container ${isOpen ? 'open' : 'closed'}`}>
           <div className="left-side">
             <div className="login">
               <h2>Se connecter</h2>
@@ -16,6 +24,9 @@ const Popup = () => {
           </div>
 
           <div className="right-side">
+          <div className="close-popup">
+            <button className="closeBtn" onClick={closePopup}>X</button>
+            </div>
             <div className="signUp">
               <h2>S'inscrire</h2>
               <button className="signupBtn">Inscription</button>
@@ -26,6 +37,7 @@ const Popup = () => {
           </div>
         </div>
       </div>
+        )}
     </div>
   );
 };
