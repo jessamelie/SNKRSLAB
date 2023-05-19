@@ -23,19 +23,27 @@ const Landing = () => {
             
                 {isOpen && <Popup
                       content={<>
-                      <div className='popup-container'>
-                        <div className='Login'>
-                            <h2>Se connecter</h2>
-                            <button>Connexion</button>
+                    <div className='popup-container'>
+
+                        <div className='left-side'>
+                            <div className='login'>
+                                <h2>Se connecter</h2>
+                                <input className='emailInput' placeholder='email'></input>
+                                <input className='passwordInput' placeholder='password'></input>
+                                <button className='loginBtn'>Connexion</button>
+                            </div>
                         </div>
-                        <div className='SignUp'>
-                            <h2>S'inscrire</h2>
-                            <button>Inscription</button>
-                        </div>
-                        <div className='Guest'>
+
+                        <div className='right-side'>
+                            <div className='signUp'>
+                                <h2>S'inscrire</h2>
+                                <button className='signupBtn'>Inscription</button>
+                            </div>
+                            <div className='guest'>
                             <h2>Continuer en tant qu'invité(e)</h2>
+                            </div>
                         </div>
-                        </div>
+                    </div>
                       </>}
                       handleClose={togglePopup}
                     />}

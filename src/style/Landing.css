@@ -28,7 +28,6 @@ body{
     display: flex;
     justify-content: center;
     border: 10px rgb(0, 0, 0) solid;
-    cursor: pointer;
     z-index: 1;
 }
 
@@ -39,4 +38,5 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
