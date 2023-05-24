@@ -84,6 +84,11 @@
     padding:10px;
 }
 
+.rememberLabel{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
 .right-side{
     width: 50%;
     height: 100%; 

@@ -20,6 +20,10 @@ const Popup = () => {
               <input className="emailInput" placeholder="email"></input>
               <input className="passwordInput" placeholder="password"></input>
               <button className="loginBtn">Connexion</button>
+              <div className="remember-choice">
+              <input className="remember" type="checkbox"></input>
+              <label htmlFor="remember" className="rememberLabel"> Se souvenir de moi</label>
+              </div>
             </div>
           </div>
 
@@ -28,7 +32,7 @@ const Popup = () => {
             <button className="closeBtn" onClick={closePopup}>X</button>
             </div>
             <div className="signUp">
-              <h2>S'inscrire</h2>
+              <h2>Pas encore membre ? Créer ton compte SNKRS LAB ! </h2>
               <button className="signupBtn">Inscription</button>
             </div>
             <div className="guest">
