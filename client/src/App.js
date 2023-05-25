@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import"../src/style/Landing.css";
 import Landing from "./pages/Landing";
-import Popup from "./components/Popup";
+import Homepage from "./pages/Homepage";
 
 const App = () => {
   return (
@@ -10,7 +10,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="*" element={<Landing/>}/>
-        <Route path="/portal" element={<Popup/>}/>
+        <Route path="/homepage" element={<Homepage/>}/>
+    
       </Routes>
     </BrowserRouter>
   );
