@@ -1,3 +1,39 @@
-.nav-container{
-    background-color:red
+.nav-container {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logo h1{
+    font-weight: 900;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255)!important;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+}
+
+.navItem {
+    height: 100%;
+    font-size: 17px;
+    font-weight: 450;
+    padding: 0 150px;
+    margin: 0;
 }

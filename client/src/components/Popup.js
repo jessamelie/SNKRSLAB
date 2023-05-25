@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../style/Popup.css";
+import { Link } from "react-router-dom";
 
 const Popup = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -19,7 +20,9 @@ const Popup = () => {
               <h2>Se connecter</h2>
               <input className="emailInput" placeholder="email"></input>
               <input className="passwordInput" placeholder="password"></input>
-              <button className="loginBtn">Connexion</button>
+              <Link to="/homepage">
+                <button className="loginBtn">Connexion</button>
+              </Link>
               <div className="remember-choice">
               <input className="remember" type="checkbox"></input>
               <label htmlFor="remember" className="rememberLabel"> Se souvenir de moi</label>
