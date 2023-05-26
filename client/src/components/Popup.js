@@ -20,9 +20,7 @@ const Popup = () => {
               <h2>Se connecter</h2>
               <input className="emailInput" placeholder="email"></input>
               <input className="passwordInput" placeholder="password"></input>
-              <Link to="/homepage">
                 <button className="loginBtn">Connexion</button>
-              </Link>
               <div className="remember-choice">
               <input className="remember" type="checkbox"></input>
               <label htmlFor="remember" className="rememberLabel"> Se souvenir de moi</label>
@@ -39,7 +37,9 @@ const Popup = () => {
               <button className="signupBtn">Inscription</button>
             </div>
             <div className="guest">
+            <Link to="/homepage" style={{textDecoration: 'none'}}>
               <h2>Continuer en tant qu'invité(e)</h2>
+            </Link>
             </div>
           </div>
         </div>

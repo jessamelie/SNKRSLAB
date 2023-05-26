@@ -4,17 +4,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px black solid;
 }
 
-.nav-container ul {
+/* .nav-container ul {
     padding: 0px;
     margin: 0px;
+} */
+
+.nav-container li{
+    list-style: none;
+}
+
+.nav-container a{
+    text-decoration: none;
+    color: black;
 }
 
 .logo{
   display: flex;
-  align-items: center;
+  align-items: left;
   margin: 0;
+  border: 5px black solid;
+  background-color: rgb(255, 255, 255);
 }
 
 .logo h1{
@@ -27,13 +39,12 @@
     list-style: none;
     display: flex;
     justify-content: center;
-    background-color: brown;
 }
 
 .navItem {
     height: 100%;
     font-size: 17px;
     font-weight: 450;
-    padding: 0 150px;
+    padding: 0 100px;
     margin: 0;
 }

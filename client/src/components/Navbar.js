@@ -6,27 +6,29 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo">
-          <h1>SNKRS LAB </h1>
+        <li>
+          <h1>SNKRS LAB</h1>
+        </li>
       </div>
       <nav>
         <ul className="navList">
           <li className="navItem">
-            <NavLink to="/homepage" activeClassName="nav-active" style={{textDecoration: 'none'}}>
+            <NavLink to="/homepage" activeClassName="nav-active">
               Home
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to="/actualites" activeClassName="nav-active" style={{textDecoration: 'none'}}>
+            <NavLink to="/actualites" activeClassName="nav-active">
               Actu
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to="/blog" activeClassName="nav-active" style={{textDecoration: 'none'}}>
+            <NavLink to="/blog" activeClassName="nav-active">
               Blog
             </NavLink>
           </li>
           <li className="navItem">
-            <NavLink to="/shop" activeClassName="nav-active" style={{textDecoration: 'none'}}>
+            <NavLink to="/shop" activeClassName="nav-active">
               Shop
             </NavLink>
           </li>
