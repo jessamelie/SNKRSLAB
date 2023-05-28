@@ -1,7 +1,6 @@
 import React from 'react';
-import "../style/Homepage.css";
 import Navbar from '../components/Navbar';
-import ContentBloc from '../components/ContentBloc';
+import Carousel from '../components/Carousel';
 
 const Homepage = () => {
 
@@ -9,7 +8,7 @@ const Homepage = () => {
 
         <div className='homepage'>
             <Navbar/>
-            <ContentBloc/>
+            <Carousel/>
         </div>
     );
 };

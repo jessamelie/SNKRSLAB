@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../style/Landing.css";
 import Popup from "../components/Popup";
-import Navbar from "../components/Navbar";
 
 const Landing = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +16,6 @@ const Landing = () => {
           <h1>SNKRS LAB </h1>
         </div>
       </div>
-      <Navbar/>
       {isOpen && <Popup handleClose={togglePopup} />}
     </div>
   );

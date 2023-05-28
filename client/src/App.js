@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import"../src/style/Landing.css";
 import Landing from "./pages/Landing";
 import Homepage from "./pages/Homepage";
+import News from "./pages/News";
+import Blog from "./pages/Blog";
+import Shop from "./pages/Shop";
 
 const App = () => {
   return (
@@ -11,7 +14,9 @@ const App = () => {
         <Route path="/" element={<Landing/>}/>
         <Route path="*" element={<Landing/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
-    
+        <Route path="/news" element={<News/>}/>
+        <Route path="/blog" element={<Blog/>}/>
+        <Route path="/shop" element={<Shop/>}/>
       </Routes>
     </BrowserRouter>
   );
