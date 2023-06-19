@@ -13,7 +13,6 @@ const Navbar = () => {
       <div className="logo">
           <h1>SNKRS LAB</h1>
       </div>
-      <nav>
         <ul className="navList">
           <li className="navItem">
             <NavLink to="/homepage" activeClassName="nav-active">
@@ -36,13 +35,12 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-      </nav>
       <div className="searchBar">
       <input className="searchInput" placeholder="Rechercher sur le site"></input>
       <SearchIcon/>
       </div>
       <div className="accountIcons">
-        <PersonOutlineOutlinedIcon fontSize="large" style={{ marginRight: '12px' }}/>
+        <PersonOutlineOutlinedIcon fontSize="large" style={{ marginRight: '12px' }} />
         <FavoriteBorderIcon fontSize="large" style={{ marginRight: '12px' }} />
         <ShoppingCartOutlinedIcon fontSize="large"/>
       </div>

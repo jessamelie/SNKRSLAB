@@ -1,5 +1,5 @@
 .nav-container {
-    width: 100%;
+    min-width: 100%;
     min-height: 50px;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
 
 .logo {
     position: relative;
-    left: 40px;
+    left: 4rem;
     border: 5px black solid;
     background-color: rgb(255, 255, 255);
 }
@@ -46,7 +46,7 @@
     height: 100%;
     font-size: 17px;
     font-weight: 450;
-    padding: 0 110px;
+    padding: 0 10px;
     margin: 0;
 }
 

@@ -1,12 +1,32 @@
 import React, { useState } from "react";
 import "../style/Popup.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Popup = () => {
-    const [isOpen, setIsOpen] = useState(true);
 
+    // Affichage par défaut de la popup en mode ON
+    const [isOpen, setIsOpen] = useState(true);
+    // Fermeture de la popup 
     const closePopup = () => {
       setIsOpen(false);
+    };
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    //Fonction pour se connecter en appuyant sur le bouton Connecter
+    async function submit(e){
+      e.preventDefault();
+
+      try{
+        await axios.post('http://localhost:3000/',{
+          email,password
+        })
+      }
+      catch (err) {
+        console.log(err)
+      }
     };
 
 
@@ -15,12 +35,15 @@ const Popup = () => {
         {isOpen && (
       <div className="box">
         <div className={`popup-container ${isOpen ? 'open' : 'closed'}`}>
+
           <div className="left-side">
             <div className="login">
               <h2>Se connecter</h2>
-              <input className="emailInput" placeholder="email"></input>
-              <input className="passwordInput" placeholder="password"></input>
-                <button className="loginBtn">Connexion</button>
+              <form action="POST">
+              <input className="emailInput" type="email" placeholder="email" onChange={(e)=>{setEmail(e.target.value)}}></input>
+              <input className="passwordInput" type="password" placeholder="password" onChange={(e)=>{setPassword(e.target.value)}}></input>
+              </form>
+              <button className="loginBtn" type="submit" onClick={submit}>Connexion</button>
               <div className="remember-choice">
               <input className="remember" type="checkbox"></input>
               <label htmlFor="remember" className="rememberLabel"> Se souvenir de moi</label>
