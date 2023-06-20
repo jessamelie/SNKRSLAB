@@ -44,7 +44,7 @@ const userSchema = new mongoose.Schema(
         timestamps: true,
     });
 
-//Avant d'enregristrer les données dans la DB, cryptage du mot de passe
+//Avant d'enregistrer les données dans la DB, cryptage du mot de passe
 userSchema.pre('save', async function(next) {
     const salt = await bcrypt.genSalt();
     this.password = await bcrypt.hash(this.password, salt);
