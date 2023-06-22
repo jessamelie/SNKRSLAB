@@ -55,3 +55,24 @@ module.exports.updateUser = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+//DELETE USER
+module.exports.deleteUser = async (req, res) => {
+  try {
+
+    if (!ObjectID.isValid(req.params.id)) {
+      return res.status(400).send("Unknown ID: " + req.params.id);
+    }
+
+    const user = await userModel.deleteOne({_id:req.params.id}).exec();
+
+    if (user) {
+      res.send({user:'Succesfully deleted'});
+    } else {
+      res.status(404).send("User not found");
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}
