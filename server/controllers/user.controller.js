@@ -1,22 +1,32 @@
-const userModel = require ('../models/user.model.js');
+const userModel = require('../models/user.model.js');
 const ObjectID = require('mongoose').Types.ObjectId;
 
-
-//Pour obtenir tous les users de la base de données 
+// Pour obtenir tous les utilisateurs de la base de données
 module.exports.getAllUsers = async (req, res) => {
-    const users = await userModel.find().select('-password'); //demande de tous les users sans les mdp
+  try {
+    const users = await userModel.find().select('-password');
     res.status(200).json(users);
-}
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
 
-//Pour obtbenir les infos d'un seul user
+// Pour obtenir les informations d'un seul utilisateur
 module.exports.userInfo = async (req, res) => {
-    //pour savoir si l'ID est connu dans la base de données
-    if (!ObjectID.isValid(req.params.id)) 
-        return res.status(400).send('ID unknowm : ' + req.params.id)
-    
-    userModel.findById(req.params.id, (err, data) => {
-        if (!err) res.send(data);
-        else console.log('ID unknowm : ' + err)
+  try {
+    if (!ObjectID.isValid(req.params.id)) {
+      return res.status(400).send('Unknown ID: ' + req.params.id);
+    }
 
-        }).select('-password')
-    };
+    const user = await userModel.findById(req.params.id).select('-password');
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send('User not found');
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
