@@ -1,5 +1,6 @@
 const userModel = require("../models/user.model");
 
+//CREATE user
 // Gestion de l'inscription, la connexion et la déconnexion uniquement
 module.exports.signUp = async (req, res) => {
   const {pseudo, email, password} = req.body;

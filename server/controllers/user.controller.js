@@ -1,6 +1,7 @@
 const userModel = require('../models/user.model.js');
 const ObjectID = require('mongoose').Types.ObjectId;
 
+//READ user
 // Pour obtenir tous les utilisateurs de la base de données
 module.exports.getAllUsers = async (req, res) => {
   try {
