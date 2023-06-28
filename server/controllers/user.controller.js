@@ -111,12 +111,23 @@ await userModel.findByIdAndUpdate(req.body.idToFollow,
 //UNFOLLOW
 module.exports.unfollow = async (req, res) => {
   try{
-    if (!ObjectID.isValid(req.params.id)) {
+    if (!ObjectID.isValid(req.params.id) || (!ObjectID.isValid(req.body.idToUnfollow))) {
       return res.status(400).send("Unknown ID: " + req.params.id);
     }
 
+//pour supprimer un abonné(e) dans sa liste (followers list)
+const user = await userModel.findByIdAndUpdate(req.params.id, 
+  {$pull: {following: req.body.idToUnfollow}},
+  {new: true, upsert: true});
 
+  if (user) {res.send(user)
+  } else { 
+  res.status(404).send("User not found") }
 
+//supression dans la liste des personnes que l'on suit (following list)
+await userModel.findByIdAndUpdate(req.body.idToUnfollow,
+  {$pull: {followers: req.params.id}},
+  {new: true, upsert: true});
 
   }catch (error) {
     console.error(error);
