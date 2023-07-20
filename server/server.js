@@ -6,13 +6,14 @@ require('./config/database.js');
 
 const app = express();
 
+//utilisation de bodyParser pour traiter les requêtes au bon format
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Routes
+//ROUTES
 app.use('/api/user', userRoutes);
 
-// Appel serveur
+//APPEL SERVEUR
 app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });

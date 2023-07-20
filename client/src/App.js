@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage";
 import News from "./pages/News";
 import Blog from "./pages/Blog";
 import Shop from "./pages/Shop";
+import Inscription from "./pages/Inscription";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="*" element={<Landing/>}/>
+        <Route path="/signup" element={<Inscription/>}/>
         <Route path="/homepage" element={<Homepage/>}/>
         <Route path="/news" element={<News/>}/>
         <Route path="/blog" element={<Blog/>}/>
