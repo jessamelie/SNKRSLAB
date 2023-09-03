@@ -2,8 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 
-
 const app = express();
+
+const dbConnexion = require('./config/database'); 
 
 const userRoutes = require('./routes/user.routes.js');
 
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
     );
     next();
   });
+
 
 //ROUTES
 app.use('/api/user', userRoutes);
