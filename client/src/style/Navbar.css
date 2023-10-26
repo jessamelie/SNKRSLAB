@@ -1,17 +1,10 @@
 .nav-container {
-    min-width: 100%;
-    min-height: 50px;
+    width: 100vw;
+    max-width: 1440px;
+    height: 45px;
     display: flex;
     align-items: center;
-}
-
-/* .nav-container ul {
-    padding: 0px;
-    margin: 0px;
-} */
-
-.nav-container li{
-    list-style: none;
+    /* background-color: blue; */
 }
 
 .nav-container a{
@@ -19,47 +12,49 @@
     color: black;
 }
 
+.logo {
+    padding: 0.9%;
+    /* background-color: blueviolet; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
 .logo h1{
-    display: flex;
+    margin: 0px;
     font-size: 1em;
-    padding: 10%;
-    margin: 2%;
-    background-color: rgb(255, 255, 255)!important;
 }
 
 .navList {
+    width: 40%;
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 3%;
+    /* background-color: rgb(226, 43, 153); */
 }
 
 .navItem {
-    height: 100%;
-    font-size: 100%;
-    font-weight: 450px;
-    padding: 0 5%;
-    margin: 0;
-    background-color: aquamarine;
+    padding: 0 8%;
 }
 
 .searchBar{
     display: flex;
+    width: 18%;
     align-items: center;
-    background-color: rgb(206, 184, 227);
-    left: 10%;
+    margin: 8%;
+    /* background-color: rgb(0, 110, 255); */
 }
 
-/* .searchInput{
+.searchInput{
     border: none;
 	border-bottom: 1px solid #D1D1D4;
 	background: none;
-	padding: 5px;
-	padding-left: 70px;
-	font-weight: 100;
+	padding: 3px;
+	font-weight: 10;
 	width: 100%;
 	transition: .2s
-} */
+}
 
 .searchInput:active,
 .searchInput:focus,
@@ -69,6 +64,7 @@
 }
 
 .accountIcons{
+    background-color: blue;
     display: flex;
     position: relative;
     left: 35%;

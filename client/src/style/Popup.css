@@ -1,137 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    font-family: Poppins;
+* {
+  font-family: Poppins;
 }
 
-.popup-container{
-    width: 800px;
-    height: 300px;
-    background-color: rgb(255, 255, 255) !important;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    border: 10px rgb(0, 0, 0) solid;
+.popup-container {
+  width: 800px;
+  height: 300px;
+  background-color: rgb(255, 255, 255) !important;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  border: 10px rgb(0, 0, 0) solid;
 }
 
-.popup-container>*{
-    background-color: white;
+.popup-container > * {
+  background-color: white;
 }
 
-.left-side{
-    width: 50%;
-    height: 100%; 
+.left-side {
+  width: 50%;
+  height: 100%;
 }
 
-.login{
-    width: 100%;
-    height: 100%;
-	padding-left: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid rgb(0, 0, 0);
+.login {
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgb(0, 0, 0);
 }
 
 .login h2 {
-    top: 200px;
+  top: 200px;
 }
 
-.emailInput{
-    border: none;
-	border-bottom: 1px solid #D1D1D4;
-	background: none;
-	padding: 10px;
-	padding-left: 2px;
-	font-weight: 200;
-	width: 50%;
-	transition: .2s
+.emailInput {
+  border: none;
+  border-bottom: 1px solid #d1d1d4;
+  background: none;
+  padding: 10px;
+  padding-left: 2px;
+  font-weight: 200;
+  width: 50%;
+  transition: 0.2s;
 }
 
 .emailInput:active,
 .emailInput:focus,
-.emailInput:hover{
-    outline: none;
-    border-bottom-color: black;
+.emailInput:hover {
+  outline: none;
+  border-bottom-color: black;
 }
 
-.passwordInput{
-    border: none;
-	border-bottom: 1px solid #D1D1D4;
-	background: none;
-	padding: 10px;
-	padding-left: 2px;
-	font-weight: 200;
-	width: 50%;
-	transition: .2s
+.passwordInput {
+  border: none;
+  border-bottom: 1px solid #d1d1d4;
+  background: none;
+  padding: 10px;
+  padding-left: 2px;
+  font-weight: 200;
+  width: 50%;
+  transition: 0.2s;
 }
 
 .passwordInput:active,
 .passwordInput:focus,
-.passwordInput:hover{
-    outline: none;
-    border-bottom-color: black;
+.passwordInput:hover {
+  outline: none;
+  border-bottom-color: black;
 }
 
 .loginBtn {
-    font-size: 13px;
-	color: #000000;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    padding:10px;
+  font-size: 13px;
+  color: #000000;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
-.rememberLabel{
-    font-size: 12px;
-    margin-bottom: 10px;
+.rememberLabel {
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
-.right-side{
-    width: 50%;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    padding-left:24px;
+.right-side {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
 }
 
-.signUp{
-    display: flex;
-    flex-direction: column;
-    padding-left: 24px;
-    height: 50%;
+.signUp {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  height: 50%;
 }
 
-.signupBtn{
-    width: 100px;
-    font-size: 13px;
-	color: #000000;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    padding:10px;
+.signupBtn {
+  width: 100px;
+  font-size: 13px;
+  color: #000000;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
-.guest{
-    display: flex;
-    padding-left: 24px;
+.guest {
+  display: flex;
+  padding-left: 24px;
 }
 
-.close-popup{
-    display: flex;
+.close-popup {
+  display: flex;
 }
 
-.closeBtn{
-    margin-left: 350px;
-    margin-top: 10px;
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    font-weight: 700;
+.closeBtn {
+  margin-left: 350px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
 }
